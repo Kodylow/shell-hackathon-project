@@ -1,8 +1,5 @@
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+import AppBar from "@mui/material/AppBar";
+import BitcoinPayment from "./components/BitcoinPayment";
 import Home from './views/Home';
 import './global-styles/index.scss';
 import { useState, useEffect } from 'react';
@@ -24,15 +21,9 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <Switch>
-        <Route path="/">
-          <div className="App">
-            <Home headerUnderJumbo={ headerUnderJumbo } />
-          </div>
-        </Route>
-      </Switch>
-    </Router>
+    <div className="App">
+      <Home headerUnderJumbo={ headerUnderJumbo } />
+    </div>
   );
 }
 
