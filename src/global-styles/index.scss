@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@500&display=swap');
+@import './materialize/sass/materialize.scss';
+@import './_colors.scss';
+
+body {
+  margin: 0;
+  font-family: 'Averta','Helvetica Neue','Helvetica','Arial','sans-serif';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+  color: $darkGray;
+
+  * {
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+}
+
+.container-wide {
+  width: 100%;
+}

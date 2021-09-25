@@ -1,0 +1,77 @@
+@import '/src/global-styles/_colors.scss';
+
+.Product {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  padding: 25px 0;
+  border-bottom: 1px solid rgb(235, 235, 235);
+
+  p {
+    margin-top: 0;
+  }
+
+  .image_block, .date_time_block, .details_block, .buy_block {
+    width: 25%;
+    padding: 5px 15px;
+
+    @media (max-width: 992px) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  .image_block {
+    padding: 0;
+
+    img {
+      width: 200px;
+      height: 100px;
+      object-fit: cover;
+      object-position: top;
+
+      @media (max-width: 992px) {
+        width: 100%;
+        height: 300px;
+      }
+
+      @media (max-width: 600px) {
+        height: 200px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  .buy_block {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    .btn {
+      background-color: $darkRed;
+      font-family: 'Averta','Helvetica Neue','Helvetica','Arial','sans-serif';
+      font-weight: 600;
+      text-transform: none;
+      min-width: 150px;
+
+      @media (max-width: 992px) {
+        width: 100%;
+      }
+
+      &:hover {
+        background-color: $mainRed;
+      }
+      &:active {
+        background-color: $lightRed;
+      }
+    }
+
+    @media (max-width: 992px) {
+      justify-content: flex-start;
+    }
+  }
+}
