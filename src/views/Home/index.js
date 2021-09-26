@@ -1,5 +1,6 @@
 import './index.scss';
 import ProductList from '../../components/ProductList';
+import Modal from '../../components/Modal';
 import { useState } from 'react';
 
 function Home({ headerUnderJumbo }) {
@@ -101,6 +102,14 @@ function Home({ headerUnderJumbo }) {
       location: 'Sunrise, FL'
     },
   ]);
+  const [showModal, setShowModal] = useState(false);
+  const [modalProduct, setModalProduct] = useState({});
+
+  const displayProduct = (product) => {
+    setShowModal(true);
+    setModalProduct(product);
+  };
+
 
   return (
   <div className="Home">
@@ -119,7 +128,9 @@ function Home({ headerUnderJumbo }) {
     <main id="main">
       <div className="container">
         <h2>All Concerts Near Miami, FL ({products.length})</h2>
-        <ProductList products={products} />
+        <ProductList
+          products={products}
+          displayProduct={displayProduct} />
       </div>
     </main>
 
@@ -127,6 +138,8 @@ function Home({ headerUnderJumbo }) {
       <p>CryptoTickets<sup>TM</sup></p>
       <p>Sponsored by Shellhacks.</p>
     </footer>
+
+    { showModal ? <Modal product={modalProduct} setShowModal={setShowModal} /> : null }
   </div>
   );
 }

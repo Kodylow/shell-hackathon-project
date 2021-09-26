@@ -1,6 +1,6 @@
 import './index.scss';
 
-function Product({ product }) {
+function Product({ product, displayProduct }) {
   return (
   <div className="Product">
     <div className="image_block">
@@ -22,7 +22,9 @@ function Product({ product }) {
     </div>
 
     <div className="buy_block">
-      <button className="btn">
+      <button
+        className="btn"
+        onClick={() => { displayProduct(product) }}>
         Buy Ticket
       </button>
     </div>

@@ -1,3 +1,4 @@
+import './index.scss';
 import React, { useState, useEffect } from "react";
 import mempoolJS from "@mempool/mempool.js";
 import QRCode from "qrcode.react";
@@ -25,18 +26,23 @@ function BitcoinPayment() {
 
   return (
     <div className="BitcoinPayment">
-      <p>Bitcoin Payment</p>
+      <h3>Pay With Bitcoin</h3>
       {paidTx.length > 0 ? (
         <img
-          style={{ height: "128px", width: "128px", border: "solid black 2px" }}
+          className="qr-code"
           src="./check02.gif"
           alt="checkmark"
         />
       ) : (
-        <QRCode value="39NKXrngy9wSDQqQZ5WLZykfpmV3c9SqsL" />
+        <QRCode
+          className="qr-code"
+          value="39NKXrngy9wSDQqQZ5WLZykfpmV3c9SqsL" />
       )}
-      <p>Lightning Payment</p>
-      <QRCode value="LNURL1DP68GURN8GHJ7MRWVF5HGUEWVDHK6TMVDE6HYMRS9ASHQ6F0WCCJ7MRWW4EXCTECXSEQGY3KV0" />
+      <h3>Pay With Lightning</h3>
+      <QRCode
+        className="qr-code"
+        style={ {marginBottom:"50px"} }
+        value="LNURL1DP68GURN8GHJ7MRWVF5HGUEWVDHK6TMVDE6HYMRS9ASHQ6F0WCCJ7MRWW4EXCTECXSEQGY3KV0" />
     </div>
   );
 }
