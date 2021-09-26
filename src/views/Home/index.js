@@ -149,13 +149,13 @@ function Home({ headerUnderJumbo }) {
   <div className="Home">
     <header id="header" className={(() => (headerUnderJumbo) ? 'under_jumbo' : '')()}>
       <div className="container container-wide">
-        <h2 className="logo">CryptoTickets</h2>
+        <h2 className="logo">BitcoinTickets</h2>
       </div>
     </header>
     <div id="jumbo">
       <div className="container">
-        <h2>Let's Make Crypto Happen</h2>
-        <p>Shop amazing live concerts and discover the capabilities of cryptocurrencies by making your purchase with Bitcoin (BTC).</p>
+        <h2>Let's Make Bitcoin Happen</h2>
+        <p>Shop amazing live concerts and discover the capabilities of Bitcoin by making your purchase with Lightning.</p>
       </div>
     </div>
 
@@ -171,7 +171,7 @@ function Home({ headerUnderJumbo }) {
     </main>
 
     <footer id="footer">
-      <h2 className="logo">CryptoTickets</h2>
+      <h2 className="logo">BitcoinTickets</h2>
       <p>Sponsored by Shellhacks.</p>
     </footer>
 

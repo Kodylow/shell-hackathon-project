@@ -5,20 +5,21 @@ import {useState} from 'react';
 function Modal({product, setProductQuantity, setShowModal}) {
   const [paidTx, setPaidTx] = useState(0)
   const randomCode = () => {
-  var chars = [
-   "ABCDEFGHIJKLMNOPQRSTUVWXYZ", // letters_upper
-	 "abcdefghijklmnopqrstuvwxyz", // letters_lower
-   "0123456789", // numbers
-  ];
+    var chars = [
+     "ABCDEFGHIJKLMNOPQRSTUVWXYZ", // letters_upper
+  	 "abcdefghijklmnopqrstuvwxyz", // letters_lower
+     "0123456789", // numbers
+    ];
 
-  return [10, 10, 10].map(function(len, i) {
-    return Array(len).fill(chars[i]).map(function(x) {
-      return x[Math.floor(Math.random() * x.length)];
-    }).join('');
-  }).concat().join('').split('').sort(function(){
-    return 0.5-Math.random();
-  }).join('')
-}
+    return [10, 10, 10].map(function(len, i) {
+      return Array(len).fill(chars[i]).map(function(x) {
+        return x[Math.floor(Math.random() * x.length)];
+      }).join('');
+    }).concat().join('').split('').sort(function(){
+      return 0.5-Math.random();
+    }).join('')
+  }
+  const code = randomCode();
 
   return (
   <div className="Modal">
@@ -48,12 +49,13 @@ function Modal({product, setProductQuantity, setShowModal}) {
             <LightningPayment
               setShowModal={setShowModal}
               setPaidTx={setPaidTx}
+              code={code}
               quantity={product.quantity} />
             </>
         ) : (
           <>
           <h4>Your ticket has been purchased, please check your email in a few seconds.</h4>
-          <p>Confirmation Code: {randomCode()}</p>
+          <p>Confirmation Code: {code}</p>
           </>
         )}
         </div>
