@@ -2,8 +2,23 @@ import './index.scss';
 import LightningPayment from '../KodyStuff/LightningPayment';
 import {useState} from 'react';
 
-function Modal({product, setShowModal}) {
+function Modal({product, setProductQuantity, setShowModal}) {
   const [paidTx, setPaidTx] = useState(0)
+  const randomCode = () => {
+  var chars = [
+   "ABCDEFGHIJKLMNOPQRSTUVWXYZ", // letters_upper
+	 "abcdefghijklmnopqrstuvwxyz", // letters_lower
+   "0123456789", // numbers
+  ];
+
+  return [10, 10, 10].map(function(len, i) {
+    return Array(len).fill(chars[i]).map(function(x) {
+      return x[Math.floor(Math.random() * x.length)];
+    }).join('');
+  }).concat().join('').split('').sort(function(){
+    return 0.5-Math.random();
+  }).join('')
+}
 
   return (
   <div className="Modal">
@@ -25,8 +40,22 @@ function Modal({product, setShowModal}) {
           </p>
 
           <p className="venue_block">{product.venue} - {product.location}</p>
+          <hr />
+          {paidTx === 0 ? (
+            <>
+            <h4>{product.quantity} tickets</h4>
 
-          {paidTx === 0 ? <LightningPayment setShowModal={setShowModal} setPaidTx={setPaidTx} /> : <p>Paid!!</p>}
+            <LightningPayment
+              setShowModal={setShowModal}
+              setPaidTx={setPaidTx}
+              quantity={product.quantity} />
+            </>
+        ) : (
+          <>
+          <h4>Your ticket has been purchased, please check your email in a few seconds.</h4>
+          <p>Confirmation Code: {randomCode()}</p>
+          </>
+        )}
         </div>
     </div>
   </div>

@@ -3,7 +3,7 @@ import LNPay from "lnpay";
 import QRCode from "qrcode.react";
 import useInterval from "./useInterval";
 
-function LightningPayment({setShowModal, setPaidTx}) {
+function LightningPayment({setShowModal, setPaidTx, quantity}) {
 
   const [invoice, setInvoice] =useState(false);
 
@@ -20,7 +20,7 @@ function LightningPayment({setShowModal, setPaidTx}) {
     checkForTx().then((res) => {
       setPaidTx(res.settled);
     });
-  }, 5000);
+  }, 1000);
 
   useEffect(() => {
     const lnpay = LNPay({
@@ -29,7 +29,7 @@ function LightningPayment({setShowModal, setPaidTx}) {
     });
     const invoice = async () => {
       return await lnpay.generateInvoice({
-        num_satoshis: 10,
+        num_satoshis: quantity * 10,
         passTru: {
           order_id: "10",
         },
@@ -45,8 +45,8 @@ function LightningPayment({setShowModal, setPaidTx}) {
 
   return (invoice ? (
   <div>
-    <QRCode value={invoice.payment_request} style={{width:'300px', height:'300px'}}/>
-    <p>{invoice.num_satoshis} sats</p>
+    <QRCode value={invoice.payment_request} />
+    <h4>{invoice.num_satoshis} SAT (1 sat = 0.00000001 BTC)</h4>
   </div>
    ) : <div/>);
 }
