@@ -32,7 +32,7 @@ function Home({ headerUnderJumbo }) {
     {
       artist: 'Kendrick Lamar',
       image: '/images/kendrick.jpeg',
-      date: 'SEP 26',
+      date: 'SEP 27',
       time: '8:00pm',
       venue: 'BB&T Center',
       location: 'Sunrise, FL'
@@ -40,7 +40,7 @@ function Home({ headerUnderJumbo }) {
     {
       artist: 'Bruno Mars',
       image: '/images/bruno-mars.jpeg',
-      date: 'SEP 26',
+      date: 'SEP 27',
       time: '8:00pm',
       venue: 'Hard Rock Stadium',
       location: 'Miami, FL'
@@ -48,7 +48,7 @@ function Home({ headerUnderJumbo }) {
     {
       artist: 'Billie Eillish',
       image: '/images/billie_eillish.jpeg',
-      date: 'SEP 26',
+      date: 'SEP 27',
       time: '7:30pm',
       venue: 'Culture Room',
       location: 'Fort Lauderdale, FL'
@@ -56,7 +56,7 @@ function Home({ headerUnderJumbo }) {
     {
       artist: 'Lorde',
       image: '/images/lorde.jpeg',
-      date: 'SEP 26',
+      date: 'SEP 28',
       time: '9:00pm',
       venue: 'Hard Rock Live',
       location: 'Hollywood, FL'
@@ -64,7 +64,7 @@ function Home({ headerUnderJumbo }) {
     {
       artist: 'Kanye West',
       image: '/images/kanye.jpeg',
-      date: 'SEP 26',
+      date: 'SEP 28',
       time: '8:00pm',
       venue: 'BB&T Center',
       location: 'Sunrise, FL'
@@ -72,7 +72,7 @@ function Home({ headerUnderJumbo }) {
     {
       artist: 'Taylor Swift',
       image: '/images/taylor_swift.jpeg',
-      date: 'SEP 26',
+      date: 'SEP 28',
       time: '8:00pm',
       venue: 'Hard Rock Stadium',
       location: 'Miami, FL'
@@ -80,7 +80,7 @@ function Home({ headerUnderJumbo }) {
     {
       artist: 'Future',
       image: '/images/future.jpeg',
-      date: 'SEP 26',
+      date: 'SEP 29',
       time: '7:30pm',
       venue: 'Culture Room',
       location: 'Fort Lauderdale, FL'
@@ -88,7 +88,7 @@ function Home({ headerUnderJumbo }) {
     {
       artist: 'Guns & Roses',
       image: '/images/gunsnroses.jpeg',
-      date: 'SEP 26',
+      date: 'SEP 29',
       time: '9:00pm',
       venue: 'Hard Rock Live',
       location: 'Hollywood, FL'
@@ -96,7 +96,7 @@ function Home({ headerUnderJumbo }) {
     {
       artist: 'Ed Sheeran',
       image: '/images/ed_sheeran.jpeg',
-      date: 'SEP 26',
+      date: 'SEP 29',
       time: '8:00pm',
       venue: 'BB&T Center',
       location: 'Sunrise, FL'
@@ -115,7 +115,7 @@ function Home({ headerUnderJumbo }) {
   <div className="Home">
     <header id="header" className={(() => (headerUnderJumbo) ? 'under_jumbo' : '')()}>
       <div className="container container-wide">
-        <h2 className="logo"><span>Crypto</span>Tickets</h2>
+        <h2 className="logo">CryptoTickets</h2>
       </div>
     </header>
     <div id="jumbo">
@@ -135,7 +135,7 @@ function Home({ headerUnderJumbo }) {
     </main>
 
     <footer id="footer">
-      <p>CryptoTickets<sup>TM</sup></p>
+      <h2 className="logo">CryptoTickets</h2>
       <p>Sponsored by Shellhacks.</p>
     </footer>
 
