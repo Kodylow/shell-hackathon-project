@@ -1,15 +1,18 @@
 import './index.scss';
 import Product from '../Product';
+import { useState } from 'react';
 
-function ProductList({ products, displayProduct }) {
+function ProductList({displayProduct, products, setProductQuantity, updates}) {
   return (
   <div className="ProductList">
     {
-      products.map(function(product, index) {
+      products.map(function(product) {
         return <Product
-          product={product}
-          key={index}
-          displayProduct={displayProduct} />;
+            updates={updates}
+            product={product}
+            key={product.index}
+            displayProduct={displayProduct}
+            setProductQuantity={setProductQuantity} />;
       })
     }
   </div>

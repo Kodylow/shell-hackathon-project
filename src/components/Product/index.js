@@ -1,7 +1,7 @@
 import './index.scss';
 import { useState } from 'react';
 
-function Product({ product, displayProduct }) {
+function Product({ updates, artist, image, date, time, venue, quantity, location, product, displayProduct, setProductQuantity }) {
   return (
     <div className="Product">
       <div className="image_block">
@@ -22,31 +22,31 @@ function Product({ product, displayProduct }) {
         <p className="time_block">{product.venue} - {product.location}</p>
       </div>
 
-      <div className="buy_block">
-        <button
-          className="btn"
-          onClick={() => { displayProduct(product) }}>
-          Buy Ticket
-        </button>
-
-        <img
-          alt="increase"
-          className="action-icons"
-          src="https://image.flaticon.com/icons/svg/992/992651.svg"
-
-        />
+      <div className="quantity_block">
         <img
           alt="decrease"
           className="action-icons"
-          src="https://image.flaticon.com/icons/svg/1665/1665612.svg"
-
+          src="/images/decrease.svg"
+          onClick={() => { setProductQuantity(product.index, product.quantity - 1) }}
         />
+        <span className="quantity">
+          {product.quantity}
+        </span>
         <img
-          alt="delete"
+          alt="increase"
           className="action-icons"
-          src="https://image.flaticon.com/icons/svg/1214/1214428.svg"
+          src="/images/increase.svg"
+          onClick={() => { setProductQuantity(product.index, product.quantity + 1) }}
         />
+      </div>
 
+      <div className="buy_block">
+        <button
+          className="btn"
+          disabled={product.quantity === 0}
+          onClick={() => { displayProduct(product) }}>
+          Buy Ticket
+        </button>
       </div>
     </div>
   );

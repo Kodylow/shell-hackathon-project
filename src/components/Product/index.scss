@@ -7,14 +7,13 @@
   justify-content: space-between;
   padding: 25px 0;
   border-bottom: 1px solid rgb(235, 235, 235);
-  background-color: teal;
 
   p {
     margin-top: 0;
   }
 
   .image_block, .date_time_block, .details_block, .buy_block {
-    width: 25%;
+    width: 20%;
     padding: 5px 15px;
 
     @media (max-width: 992px) {
@@ -52,10 +51,24 @@
   .action-icons {
     height: 25px;
     width: 25px;
-    margin-right: 10px;
   }
   .action-icons:hover {
     cursor: pointer;
+  }
+
+  .quantity_block {
+    display: flex;
+
+    .quantity {
+      margin: 5px 10px;
+    }
+    .action-icons {
+      height: 25px;
+      width: 25px;
+    }
+    .action-icons:hover {
+      cursor: pointer;
+    }
   }
 
   .buy_block {
