@@ -1,4 +1,5 @@
 import './index.scss';
+import { useState } from 'react';
 
 function Product({ updates, artist, image, date, time, venue, quantity, location, product, displayProduct, setProductQuantity }) {
   return (
@@ -11,7 +12,7 @@ function Product({ updates, artist, image, date, time, venue, quantity, location
         <p className="date_block">
           <strong>{product.date}</strong>
         </p>
-        <p className="time_block">{time}</p>
+        <p className="time_block">{product.time}</p>
       </div>
 
       <div className="details_block">
