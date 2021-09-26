@@ -26,7 +26,7 @@ function Product({ updates, artist, image, date, time, venue, quantity, location
         <img
           alt="decrease"
           className="action-icons"
-          src="/images/decrease.svg"
+          src="/shell-hackathon-project/images/decrease.svg"
           onClick={() => { setProductQuantity(product.index, product.quantity - 1) }}
         />
         <span className="quantity">
@@ -35,7 +35,7 @@ function Product({ updates, artist, image, date, time, venue, quantity, location
         <img
           alt="increase"
           className="action-icons"
-          src="/images/increase.svg"
+          src="/shell-hackathon-project/images/increase.svg"
           onClick={() => { setProductQuantity(product.index, product.quantity + 1) }}
         />
       </div>

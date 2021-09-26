@@ -19,14 +19,12 @@ function LightningPayment({setShowModal, setPaidTx, quantity, code}) {
   useInterval(async () => {
     checkForTx().then((res) => {
       if (res.settled === 1) {
-        console.log(res);
       }
       setPaidTx(res.settled);
     });
   }, 1000);
 
   useEffect(() => {
-    console.log('code: ' + code);
     const lnpay = LNPay({
       secretKey: "pak_kKSYwVCK28TY7tcP9uJxWM0BYLnsdP",
       walletAccessKey: "waki_fmRmyHa9yKW0FwkrAz5Ji5lX",
