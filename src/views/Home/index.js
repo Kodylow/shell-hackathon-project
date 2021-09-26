@@ -10,7 +10,7 @@ function Home({ headerUnderJumbo }) {
     {
       index: 0,
       artist: 'Beyonce',
-      image: '/images/beyonce.jpeg',
+      image: '/shell-hackathon-project/images/beyonce.jpeg',
       date: 'SEP 26',
       time: '7:30pm',
       venue: 'Culture Room',
@@ -20,7 +20,7 @@ function Home({ headerUnderJumbo }) {
     {
       index: 1,
       artist: 'Parcels',
-      image: '/images/parcels.jpeg',
+      image: '/shell-hackathon-project/images/parcels.jpeg',
       date: 'SEP 26',
       time: '9:00pm',
       venue: 'Hard Rock Live',
@@ -30,7 +30,7 @@ function Home({ headerUnderJumbo }) {
     {
       index: 2,
       artist: 'Daft Punk',
-      image: '/images/daft_punk.jpeg',
+      image: '/shell-hackathon-project/images/daft_punk.jpeg',
       date: 'SEP 26',
       time: '8:00pm',
       venue: 'Hard Rock Stadium',
@@ -40,7 +40,7 @@ function Home({ headerUnderJumbo }) {
     {
       index: 3,
       artist: 'Kendrick Lamar',
-      image: '/images/kendrick.jpeg',
+      image: '/shell-hackathon-project/images/kendrick.jpeg',
       date: 'SEP 27',
       time: '8:00pm',
       venue: 'BB&T Center',
@@ -50,7 +50,7 @@ function Home({ headerUnderJumbo }) {
     {
       index: 4,
       artist: 'Bruno Mars',
-      image: '/images/bruno-mars.jpeg',
+      image: '/shell-hackathon-project/images/bruno-mars.jpeg',
       date: 'SEP 27',
       time: '8:00pm',
       venue: 'Hard Rock Stadium',
@@ -60,7 +60,7 @@ function Home({ headerUnderJumbo }) {
     {
       index: 5,
       artist: 'Billie Eillish',
-      image: '/images/billie_eillish.jpeg',
+      image: '/shell-hackathon-project/images/billie_eillish.jpeg',
       date: 'SEP 27',
       time: '7:30pm',
       venue: 'Culture Room',
@@ -70,7 +70,7 @@ function Home({ headerUnderJumbo }) {
     {
       index: 6,
       artist: 'Lorde',
-      image: '/images/lorde.jpeg',
+      image: '/shell-hackathon-project/images/lorde.jpeg',
       date: 'SEP 28',
       time: '9:00pm',
       venue: 'Hard Rock Live',
@@ -80,7 +80,7 @@ function Home({ headerUnderJumbo }) {
     {
       index: 7,
       artist: 'Kanye West',
-      image: '/images/kanye.jpeg',
+      image: '/shell-hackathon-project/images/kanye.jpeg',
       date: 'SEP 28',
       time: '8:00pm',
       venue: 'BB&T Center',
@@ -90,7 +90,7 @@ function Home({ headerUnderJumbo }) {
     {
       index: 8,
       artist: 'Taylor Swift',
-      image: '/images/taylor_swift.jpeg',
+      image: '/shell-hackathon-project/images/taylor_swift.jpeg',
       date: 'SEP 28',
       time: '8:00pm',
       venue: 'Hard Rock Stadium',
@@ -100,7 +100,7 @@ function Home({ headerUnderJumbo }) {
     {
       index: 9,
       artist: 'Future',
-      image: '/images/future.jpeg',
+      image: '/shell-hackathon-project/images/future.jpeg',
       date: 'SEP 29',
       time: '7:30pm',
       venue: 'Culture Room',
@@ -110,7 +110,7 @@ function Home({ headerUnderJumbo }) {
     {
       index: 10,
       artist: 'Ed Sheeran',
-      image: '/images/ed_sheeran.jpeg',
+      image: '/shell-hackathon-project/images/ed_sheeran.jpeg',
       date: 'SEP 29',
       time: '8:00pm',
       venue: 'BB&T Center',
@@ -120,7 +120,7 @@ function Home({ headerUnderJumbo }) {
     {
       index: 11,
       artist: 'Guns & Roses',
-      image: '/images/gunsnroses.jpeg',
+      image: '/shell-hackathon-project/images/gunsnroses.jpeg',
       date: 'SEP 29',
       time: '9:00pm',
       venue: 'Hard Rock Live',
