@@ -1,5 +1,5 @@
 import './index.scss';
-import BitcoinPayment from '../BitcoinPayment';
+import LightningPayment from '../KodyStuff/LightningPayment';
 
 function Modal({product, setShowModal}) {
   return (
@@ -23,7 +23,7 @@ function Modal({product, setShowModal}) {
 
           <p className="venue_block">{product.venue} - {product.location}</p>
 
-          <BitcoinPayment />
+          <LightningPayment />
         </div>
     </div>
   </div>
